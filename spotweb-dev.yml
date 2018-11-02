@@ -1,3 +1,5 @@
+profile: spotweb
+
 eureka:
   instance:
     preferIpAddress: true
