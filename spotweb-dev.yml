@@ -1,0 +1,7 @@
+eureka:
+  instance:
+    preferIpAddress: true
+    instance-id: spotweb
+  client:
+    service-url:
+      defaultZone: http://admin:Cube4302@localhost:8888/eureka/

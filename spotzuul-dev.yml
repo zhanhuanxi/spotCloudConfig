@@ -1,0 +1,27 @@
+
+server:
+  port: 9000
+
+eureka:
+  instance:
+    preferIpAddress: true
+    instance-id: spotzuul
+  client:
+    service-url:
+      defaultZone: http://admin:Cube4302@localhost:8888/eureka/
+
+zuul:
+  routes:
+    user:
+        path: /user/**
+        serviceId: SPOTUSER
+    spotweb:
+        path: /spotweb/**
+        serviceId: SPOTWEB
+spring:
+ application: zuul-service-filter
+
+
+ribbon:
+  eureka:
+    enabled: true
